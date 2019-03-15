@@ -14,7 +14,7 @@
 
   function logicFuntion(item){
     var arrayItem=item.split(",");
-    var filteredArray=arrayItem.filter(function(el){return el!=""});
+    var filteredArray=arrayItem.filter(function(el){return el.trim() !=""});
     var arrayLength=filteredArray.length;
     if(arrayLength===0){
       return "Please enter data first";
