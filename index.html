@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" ng-app="dishChecker">
   <head>
     <meta charset="utf-8">
     <title>module1 assignment</title>
+    <script src="../angular.min.js"></script>
+    <link rel="stylesheet" href="appStyle.css">
+    <script src="dishApp.js"></script>
   </head>
-  <body>
-    <h1>module1 assignment wll go here</h1>
+
+  <body ng-controller="dishCheckerController">
+    <h1>Dish checker app</h1>
+
+    <input type="text" placeholder="enter your dishes in comma seperated" ng-model="name" id="inputBox">
+    <button ng-click="checkIfTooMuch()">check if too much</button><br><br>
+
+    <div class="dishOutput">
+      {{message}}
+    </div>
   </body>
 </html>
