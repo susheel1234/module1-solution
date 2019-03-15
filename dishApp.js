@@ -5,6 +5,7 @@
 
   function dishCheckerController($scope){
     $scope.message="";
+    $scope.name="";
     $scope.checkIfTooMuch=function(){
       var returnMessage=logicFuntion($scope.name);
       $scope.message=returnMessage;
@@ -13,6 +14,16 @@
 
   function logicFuntion(item){
     var arrayItem=item.split(",");
-    return arrayItem[0];
+    var filteredArray=arrayItem.filter(function(el){return el!=""});
+    var arrayLength=filteredArray.length;
+    if(arrayLength===0){
+      return "Please enter data first";
+    }
+      else if (arrayLength<=3 && arrayLength>0) {
+      return "Enjoy";
+    }
+    else if(arrayLength>3){
+      return "Too much!";
+    }
   }
 })();

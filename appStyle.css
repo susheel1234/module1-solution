@@ -13,3 +13,8 @@ button{
   color: white;
   background: red;
 }
+.dishOutput{
+  font-size: 2em;
+  font-weight: normal;
+  color: green;
+}
